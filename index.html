@@ -28,10 +28,17 @@
             />
           </div>
           <div class="form-group">
-            <div class="password-label">
-              <label class="form-label" for="password">
-                Please type your password.
-              </label>
+            <label class="form-label" for="password"
+              >Please type your password.</label
+            >
+            <div class="input-wrapper">
+              <input
+                required
+                id="password"
+                type="password"
+                class="form-control"
+                placeholder="Enter your 8+ characters"
+              />
               <div class="password-visibility-label">
                 <div class="visibily-badge show-password">
                   <img
@@ -39,7 +46,6 @@
                     src="./aseets/icons/eye.svg"
                     alt="eye icon"
                   />
-                  <span class="">show</span>
                 </div>
                 <div class="visibily-badge hide-password">
                   <img
@@ -47,17 +53,9 @@
                     src="./aseets/icons/eye-slash.svg"
                     alt="eye icon"
                   />
-                  <span class="">hide</span>
                 </div>
               </div>
             </div>
-            <input
-              required
-              id="password"
-              type="password"
-              class="form-control"
-              placeholder="Enter your 8+ characters"
-            />
           </div>
           <label>
             <a class="forgot-password" href="/password/forgot-password">
