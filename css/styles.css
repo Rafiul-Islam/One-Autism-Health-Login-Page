@@ -1,0 +1,204 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Calibri";
+  src: url("../aseets/fonts/calibri/calibri.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-black: #333;
+  --color-border: rgb(214, 236, 228);
+  --color-field-bg: #fbfcfc;
+  --color-field-placeholder: rgb(189, 220, 209);
+  --color-primary-dark: teal;
+  --color-primary-light: rgb(214, 236, 228);
+  --color-primary: rgb(8, 156, 156);
+}
+
+html {
+  font-size: 17px;
+}
+
+@media (min-width: 400px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: "Calibri", sans-serif;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.form-section {
+  max-width: 480px;
+  padding: 36px;
+
+  .heading-section {
+    color: var(--color-primary);
+    margin-bottom: 30px;
+    text-align: center;
+
+    h2 {
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 35px;
+      margin: 0;
+
+      @media (min-width: 400px) {
+        font-size: 30px;
+        line-height: 42px;
+      }
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 10px;
+
+  .form-label {
+    color: var(--color-black);
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+
+    @media (min-width: 350px) and (max-width: 399px) {
+      font-size: 18px;
+    }
+
+    @media (min-width: 400px) {
+      font-size: 20px;
+    }
+  }
+
+  input.form-control {
+    background-color: var(--color-field-bg);
+    border-radius: 10px;
+    border: 2px solid var(--color-border);
+    box-shadow: 0 5px 5px -5px #0000001a;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 20px;
+    min-height: 44px;
+    outline: none;
+    padding: 8px 12px;
+    transition: box-shadow 0.2s, color 0.2s, box-shadow 0.2s, border-color 0.2s;
+    width: 100%;
+  }
+
+  input.form-control::placeholder {
+    color: var(--color-field-placeholder);
+  }
+
+  input.form-control:hover,
+  input.form-control:focus {
+    border-color: var(--color-primary);
+    border-width: 2px;
+    box-shadow: 0 10px 10px -5px #0000001a;
+  }
+  .password-label {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 400px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .password-visibility-label {
+      align-items: center;
+      display: flex;
+      margin-bottom: 8px;
+
+      @media (min-width: 400px) {
+        margin-bottom: 0;
+      }
+
+      .visibily-badge {
+        align-items: center;
+        background: var(--color-primary-light);
+        border-radius: 12px;
+        cursor: pointer;
+        display: flex;
+        font-size: 14px;
+        gap: 4px;
+        padding: 3px 10px;
+        text-transform: capitalize;
+
+        img {
+          width: 16px;
+        }
+      }
+
+      .hide-password {
+        display: none;
+      }
+    }
+  }
+}
+
+.forgot-password {
+  color: var(--color-primary-dark);
+  text-decoration: none;
+  transition: 0.4s ease;
+}
+
+.forgot-password:hover,
+.forgot-password:visited:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.sign-in-button {
+  background-color: var(--color-primary-dark);
+  border-radius: 30px;
+  border: 1.6px solid var(--color-primary-dark);
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+  margin-top: 25px;
+  padding: 16px;
+  transition: 0.4s ease;
+  width: 100%;
+}
+
+.sign-in-button:hover,
+.sign-in-button:active {
+  background: #fff;
+  color: var(--color-primary-dark);
+}
+
+.sign-up-text-container {
+  font-size: 20px;
+  margin-top: 25px;
+
+  .sign-up-text {
+    color: var(--color-primary-dark);
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+
+  .sign-up-text:hover,
+  .sign-up-text:visited:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+}

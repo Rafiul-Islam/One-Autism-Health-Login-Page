@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>SignIn</title>
+  </head>
+  <body>
+    <main class="container">
+      <section class="form-section">
+        <div class="heading-section">
+          <h2>Welcome back,</h2>
+          <h2>Please sign in to access our</h2>
+          <h2>‍exclusive space!</h2>
+        </div>
+        <form id="signinForm">
+          <div class="form-group">
+            <label class="form-label" for="email"
+              >Enter your registered email to sign in.</label
+            >
+            <input
+              required
+              id="email"
+              type="email"
+              placeholder="e.g. zara_s@microsoft.com"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <div class="password-label">
+              <label class="form-label" for="password">
+                Please type your password.
+              </label>
+              <div class="password-visibility-label">
+                <div class="visibily-badge show-password">
+                  <img
+                    class="eye-icon"
+                    src="./aseets/icons/eye.svg"
+                    alt="eye icon"
+                  />
+                  <span class="">show</span>
+                </div>
+                <div class="visibily-badge hide-password">
+                  <img
+                    class="eye-slash-icon"
+                    src="./aseets/icons/eye-slash.svg"
+                    alt="eye icon"
+                  />
+                  <span class="">hide</span>
+                </div>
+              </div>
+            </div>
+            <input
+              required
+              id="password"
+              type="password"
+              class="form-control"
+              placeholder="Enter your 8+ characters"
+            />
+          </div>
+          <label>
+            <a class="forgot-password" href="/password/forgot-password">
+              Forgot Password
+            </a>
+          </label>
+          <button type="submit" class="sign-in-button">Sign In</button>
+        </form>
+        <div class="sign-up-text-container">
+          New here?
+          <a class="sign-up-text" href="/sign-up" class="ms-link-3">
+            Create an account.
+          </a>
+        </div>
+      </section>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
